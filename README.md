@@ -15,12 +15,13 @@ Contributors: [Christopher Leonard](https://github.com/wilmu-wm)
 
 ## Description ##
 
-A WCAG compliant plugin allows a University department or college to display the official University of Delaware branded header and footer on a WordPress website.
+A repository for components used within the WilmU Cascade CMS application. All components are WCAG Level AA compliant.
 
-Site administrators may choose to use a college or department-specific title in addition to the official University header and footer.
+### Browser support ###
+Styles are run through Autoprefixer with the follow conditions: ** > 0.5%, last 2 versions, Firefox ESR, not dead, not IE 11 **
 
 ### Restrictions ###
-This plugin is ONLY to be used on official University of Delaware department web pages and websites in accordance with UD OCM guidelines.
+These components are ONLY to be used on official Wilmington University department web pages and websites in accordance with WU branding guidelines.
 
 ## Installation ##
 
