@@ -1,0 +1,94 @@
+:root {
+  --wu-width-xxl: 50px;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+svg {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    fill: #00843d;
+  }
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 0;
+  margin: 0;
+}
+li {
+  height: var(--wu-width-xxl);
+}
+
+.yellow {
+  color: #f9c22b;
+}
+
+#gethelp h2 {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  line-height: normal;
+  text-align: center;
+  background: #f9c22b;
+  font-weight: 700;
+}
+
+#gethelp li {
+  height: 50px;
+}
+#gethelp img[src$=".svg"] {
+  max-width: 36px !important;
+}
+#gethelp a::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  top: 0;
+  margin-right: 0.5rem;
+}
+
+#gethelp li:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+#gethelp a {
+  display: flex;
+  height: var(--wu-width-xxl);
+  align-items: center;
+  color: #00843d;
+  font-size: 14px;
+  padding-left: 15px;
+}
+#gethelp a:focus {
+  outline: dotted 0.125rem;
+  outline-color: currentcolor;
+  outline-offset: 0.125rem;
+}
+
+#gethelp {
+  display: block;
+  background: #ededed;
+  margin: 25px 0 15px;
+  border: 1px solid #ccc;
+}
+#gethelp h2 {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 15px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  line-height: normal;
+  text-align: center;
+  background: #f9c22b;
+  font-weight: 700;
+}
