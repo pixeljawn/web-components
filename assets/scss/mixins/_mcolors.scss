@@ -1,0 +1,39 @@
+@import url(../variables/_vcolors.scss);
+
+$theme-colors: (
+  green:    $color-green,
+  yellow:   $color-yellow,
+  black:    $color-black,
+  white:    $color-white,
+  dgray:    $color-dark-gray,
+  accent:   $color-yellow,
+  accent1:  $color-light-yellow,
+  accent3:  $color-dark-yellow,
+  neutral:  $color-light-gray,
+  neutral1: $color-gray,
+  neutral2: $color-dark-gray2,
+  neutral4: $color-black,
+  primary:  $color-green,
+  primary2: $color-light-green,
+  primary4: $color-dark-green
+
+);
+
+@each $theme-color, $color in $theme-colors {
+  @if (str-index($color, 'lt')) {
+    .Color-#{$theme-color} {
+      color: #{$color} !important;
+    }
+  }
+
+  @else if (str-index($color, 'dk')) {
+    .Color-#{$theme-color} {
+      color: #{$color} !important;
+    }
+  }
+  @else {
+    .Color-#{$theme-color} {
+      color: #{$color} !important;
+    }
+  }
+}

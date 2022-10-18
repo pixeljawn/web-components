@@ -1,0 +1,36 @@
+$direction: (
+  xc: block,
+  yc: inline
+);
+$location: (
+  st: start,
+  en: end
+);
+
+// Merge maps
+$merged: map-merge($direction, $location);
+
+
+
+@for $i from 0 through 9 {
+  $v: (($i * 5) + 5);
+  $block: map-get($merged, xc);
+  $inline: map-get($merged, yc);
+  $start: map-get($merged, st);
+  $end: map-get($merged, en);
+  .p#{$v} {padding: #{$v}px}
+  .pb#{$v} {padding-#{$block}: #{$v}px}
+  .pbs#{$v} {padding-#{$block}-#{$start}: #{$v}px;}
+  .pbe#{$v} {padding-#{$block}-#{$end}: #{$v}px;}
+  .pi#{$v} {padding-#{$inline}: #{$v}px;}
+  .pis#{$v} {padding-#{$inline}-#{$start}: #{$v}px;}
+  .pie#{$v} {padding-#{$inline}-#{$end}: #{$v}px;}
+
+  .m#{$v} {margin: #{$v}px}
+  .mb#{$v} {margin-#{$block}: #{$v}px}
+  .mbs#{$v} {margin-#{$block}-#{$start}: #{$v}px;}
+  .mbe#{$v} {margin-#{$block}-#{$end}: #{$v}px;}
+  .mi#{$v} {margin-#{$inline}: #{$v}px;}
+  .mis#{$v} {margin-#{$inline}-#{$start}: #{$v}px;}
+  .mie#{$v} {margin-#{$inline}-#{$end}: #{$v}px;}
+}

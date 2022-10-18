@@ -1,0 +1,43 @@
+$grid: (
+  "One": (
+    columns: "1fr",
+    size: "1fr"
+  ),
+  "Two": (
+    columns: "2",
+    size: "1fr"
+  ),
+  "Three": (
+    columns: "3",
+    size: "1fr"
+  ),
+  "Four": (
+    columns: "4",
+    size: "1fr"
+  ),
+  "Uneven": (
+    columns: "10",
+    size: "1fr"
+  ),
+  "Auto": (
+    columns: "auto-fill",
+    size: "minmax(250px, 1fr)"
+  )
+);
+
+@each $name, $details in $grid {
+$columns: map-get($details, 'columns');
+$size: map-get($details, 'size');
+$keys: map-keys($details);
+
+@if (str-index($name, 'One')) {
+  .Column#{$name} {
+    grid-template-columns: #{$columns};
+  }
+}
+@else {
+.Column#{$name} {
+    grid-template-columns: repeat(#{$columns}, #{$size});
+  }
+}
+}

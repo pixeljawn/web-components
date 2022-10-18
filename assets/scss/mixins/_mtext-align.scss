@@ -1,0 +1,14 @@
+$text-align: (
+  left: 'left',
+  center: 'center',
+  right: 'right'
+);
+
+@each $property, $values in $text-align {
+
+  @for $i from 1 through length(map-get($text-align, #{$property})) {
+    .Text-#{$values} {
+      text-align: #{map-get($text-align, to-lower-case(#{$values}))};
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.Column {
+  &-item {
+    padding: 15px;
+  }
+  &s-center {
+    place-items: center;
+  }
+  &s-centerH {
+    justify-items: center;
+  }
+  &s-centerV {
+    align-items: center;
+  }
+  &s-left {
+    justify-items: start;
+  }
+  &s-right {
+    justify-items: end;
+  }
+  &s-top {
+    align-items: start;
+  }
+  &s-bottom {
+    align-items: end;
+  }
+}
+
+.Item {
+    &-center {
+    place-self: center;
+  }
+  &-centerH {
+    justify-self: center;
+  }
+  &-centerV {
+    align-self: center;
+  }
+  &-left {
+    justify-self: start;
+  }
+  &-right {
+    justify-self: end;
+  }
+  &-top {
+    align-self: start;
+  }
+  &-bottom {
+    align-self: end;
+  }
+}

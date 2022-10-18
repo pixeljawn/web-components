@@ -1,0 +1,12 @@
+
+/** 
+ * GAP
+ * ROW GAP
+ * COLUMN GAP
+ */
+@for $i from 1 through 10 {
+    $v: (($i * 10));
+  .Gap#{$v} {gap: #{$v}px}
+  .RowGap#{$v} {row-gap: #{$v}px}
+  .ColumnGap#{$v} {column-gap: #{$v}px}
+}
